@@ -1,0 +1,37 @@
+import express from 'express';
+import bodyParser from 'body-parser';
+//import router from './config/server.routes';
+//import { ENV } from './config/env.config';
+//import { sequelize } from './config/database.config';
+//import './modules/vote/models/vote.model'; // fix solocarga los modelos con esto!
+
+
+async function start(){
+    try {
+//        await sequelize.authenticate();
+//        await sequelize.sync();
+//        console.info("base de datos conectada");
+
+//        const PORT = ENV.PORT;
+        const PORT = 3000;
+
+        const app = express();
+
+        app.use(bodyParser.json());
+
+//        app.use('/', router)
+        // Ruta básica delete this after testing
+        app.get('/', (req, res) => {
+            res.send('Server is running');
+        });
+
+        app.listen(PORT, () => {
+            console.log("Server is running on port " + PORT);
+        });
+    } catch (error) {
+        console.error("Error in server:", error);
+    }
+
+}
+
+start();
