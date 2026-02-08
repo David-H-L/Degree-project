@@ -12,9 +12,9 @@ export const ENV = {
     PGDATA: process.env.PGDATA || '/var/lib/postgresql/data/pgdata',
     PGHOST: process.env.PGHOST || 'localhost',
     PGPORT: process.env.PGPORT || '5433',
-    // new data  (next time)
-    //JWT_SECRET: process.env.JWT_SECRET || 'asdfg',
-    //SALTS: process.env.SALTS || '10', // default salts
+    // JWT
+    JWT_SECRET: process.env.JWT_SECRET || 'asdfg',
+    SALTS: process.env.SALTS || '10', // default salts
     //SOCKETIO_PORT: process.env.SOCKETIO_PORT || '3001',
-    //NODE_ENV: process.env.NODE_ENV || 'development',
+    NODE_ENV: process.env.NODE_ENV || 'development',
 }

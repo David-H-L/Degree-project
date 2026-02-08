@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-//import router from './config/server.routes';
+import router from './config/server.routes';
 //import { ENV } from './config/env.config';
 //import { sequelize } from './config/database.config';
 //import './modules/vote/models/vote.model'; // fix solocarga los modelos con esto!
@@ -19,11 +19,11 @@ async function start(){
 
         app.use(bodyParser.json());
 
-//        app.use('/', router)
+        app.use('/', router)
         // Ruta básica delete this after testing
-        app.get('/', (req, res) => {
-            res.send('Server is running');
-        });
+        //app.get('/', (req, res) => {
+        //    res.send('Server is running');
+        //});
 
         app.listen(PORT, () => {
             console.log("Server is running on port " + PORT);

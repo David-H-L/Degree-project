@@ -7,11 +7,12 @@ export enum UserRole {
 }
 
 export interface IUser {
-    id: string;
+    id: number;
     firstName: string;
     lastName: string;
     phoneNumber: string;
     role: UserRole;
+    email: string;
     password: string;
     isDeleted: boolean;
 }
