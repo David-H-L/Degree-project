@@ -51,7 +51,7 @@ export const loginService = async (payload: ILoginDto): Promise<IAuthResponse> =
     if (!user) {
       return {
         ok: false,
-        message: 'Invalid credentials',
+        message: 'Invalid credentials email not found',
       };
     }
 
@@ -60,7 +60,7 @@ export const loginService = async (payload: ILoginDto): Promise<IAuthResponse> =
     const isValidPassword = await validatePassHash(payload.password, user.password);
     
     if(!isValidPassword){
-        return { ok: false, message: 'invalid credentials' }
+        return { ok: false, message: 'invalid credentials password is incorrect' }
     }
     //End password verification implementation
     const token = generateAccessToken({

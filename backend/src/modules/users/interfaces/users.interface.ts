@@ -1,5 +1,3 @@
-import { Optional } from "sequelize";
-
 export enum UserRole {
     SUPER_ADMIN = 'super_admin',
     ADMIN = 'admin',
@@ -25,5 +23,3 @@ export interface IUserFilter {
     country?: string;
     city?: string;
 }
-
-export interface UserCreationAttributes extends Optional<IUser, 'id'> {}
