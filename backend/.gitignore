@@ -1,2 +1,5 @@
 node_modules
 .env
+
+#next push (associations)
+/src/modules/associations
